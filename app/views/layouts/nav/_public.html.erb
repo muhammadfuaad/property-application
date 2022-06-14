@@ -11,21 +11,38 @@
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="#">Home</a>
         </li>
+        <% if account_signed_in? %>
+          <li class="nav-item">
+            <%= link_to "Dashboard", "dashboard_path", class:"nav-link" %>
+          </li>
+        <% else %>
+          <li class="nav-item">
+            <%= link_to "Home", "/", class:"nav-link" %>
+          </li>
+        <% end %>
+
         <li class="nav-item">
-          <a class="nav-link" href="#">Latest</a>
+          <%= link_to "Latest", "", class:"nav-link" %>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">News</a>
+           <%= link_to "News", "", class:"nav-link" %>
         </li>
         <li class="nav-item">
-          <a class="nav-link">Advertising</a>
+            <%= link_to "Advertising", "", class:"nav-link" %>
         </li>
-        <li class="nav-item">
-          <%= link_to "Log In", new_account_session_path, class:"nav-link" %>
-        </li>
-        <li class="nav-item">
-          <%= link_to "Sign In", new_account_registration_path, class:"nav-link" %>
-        </li>
+        <% if account_signed_in? %>
+          <li class="nav-item">
+            <%= link_to "Log Out", destroy_account_session_path, class:"nav-link" %>
+          </li>
+        <% else %>
+          <li class="nav-item">
+            <%= link_to "Log In", new_account_session_path, class:"nav-link" %>
+          </li>
+          <li class="nav-item">
+            <%= link_to "Sign In", new_account_registration_path, class:"nav-link" %>
+          </li>
+        <% end %>
+        
       </ul>
     </div>
   </div>
