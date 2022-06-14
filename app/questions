@@ -1,0 +1,5 @@
+what does rails g "devise:install" do?
+how to undo scaffold?
+how to undo controller, just delete file?
+how to check whether a migration is run or not?
+what are "confirmable" and "trackable" in account.rb?
