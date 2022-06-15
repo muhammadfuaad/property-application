@@ -1,20 +1,7 @@
 <p class="text-danger">views/properties/new.html.erb</p>
 <h1>New property</h1>
 
-<%# <%= render "form", property: @property %> 
-<%# <%= render "newform" %> 
-
-<br>
-
-<%= form_for @property do |f| %>
-  <%= f.label :name %>
-  <%= f.text_field :name %><br>
-  <%= f.label :address %>
-  <%= f.text_field :address %><br>
-  <%= f.label :price %>
-  <%= f.number_field :price %><br>
-  <%= f.submit 'Create Property' %>
-<% end %>
+<%= render "form", property: @property %>
 <div>
   <%= link_to "Back to properties", properties_path %>
 </div>

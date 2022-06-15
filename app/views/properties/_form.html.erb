@@ -1,3 +1,4 @@
+<p class="text-danger">app/views/properties/_form.html.erb</p>
 <%= form_with(model: property) do |form| %>
   <% if property.errors.any? %>
     <div style="color: red">
@@ -11,5 +12,37 @@
     </div>
   <% end %>
 
-  
+  <div>
+    <%= form.label :name, style: "display: block" %>
+    <%= form.text_field :name %>
+  </div>
 
+  <div>
+    <%= form.label :address, style: "display: block" %>
+    <%= form.text_field :address %>
+  </div>
+
+  <div>
+    <%= form.label :price, style: "display: block" %>
+    <%= form.number_field :price %>
+  </div>
+
+  <div>
+    <%= form.label :rooms, style: "display: block" %>
+    <%= form.number_field :rooms %>
+  </div>
+
+  <div>
+    <%= form.label :bathrooms, style: "display: block" %>
+    <%= form.number_field :bathrooms %>
+  </div>
+
+  <div>
+    <%= form.label :photo, style: "display: block" %>
+    <%= form.text_field :photo %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
