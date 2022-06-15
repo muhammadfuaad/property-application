@@ -14,32 +14,33 @@
 
   <div>
     <%= form.label :name, style: "display: block" %>
-    <%= form.text_field :name %>
+    <%= form.text_field :name, class: "form-control" %>
   </div>
 
   <div>
     <%= form.label :address, style: "display: block" %>
-    <%= form.text_field :address %>
+    <%= form.text_field :address, class: "form-control" %>
   </div>
 
   <div>
     <%= form.label :price, style: "display: block" %>
-    <%= form.number_field :price %>
+    <%= form.number_field :price, class: "form-control" %>
   </div>
 
   <div>
     <%= form.label :rooms, style: "display: block" %>
-    <%= form.number_field :rooms %>
+    <%= form.number_field :rooms, class: "form-control" %>
   </div>
 
   <div>
     <%= form.label :bathrooms, style: "display: block" %>
-    <%= form.number_field :bathrooms %>
+    <%= form.number_field :bathrooms, class: "form-control" %>
   </div>
 
   <div>
     <%= form.label :photo, style: "display: block" %>
-    <%= form.text_field :photo %>
+    <%= form.file_field :photo, class: "form-control" %>
+    <%= form.hidden_field :photo_cache %>
   </div>
 
   <div>
