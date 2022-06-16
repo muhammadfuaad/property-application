@@ -1,1 +1,12 @@
 <p class="text-danger">views/layouts/nav/dashboard.html.erb</p>
+
+<nav class="navbar navbar-dark bg-dark flex-md-nowrap p-0 shadow">
+	<%= link_to "Property Finder", dashboard_path, class: "navbar-brand col-sm-3 col-md-2 mr-0" %>
+	<input class="form-control form-control-dark w-100" type="text" placeholder="Search" aria-label="search">
+	<ul class="navbar nav px-3">
+		<li class="nav-item text-nowrap">
+			<%= button_to "Log Out", destroy_account_session_path, method: :delete, class: "nav-link" %>
+			<%# question: not working %>
+		</li>
+	</ul>
+</nav>

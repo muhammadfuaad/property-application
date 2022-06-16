@@ -1,4 +1,5 @@
 class PublicController < ApplicationController
-  def main
-  end
+  # def main
+  #   @properties = Property.latest
+  # end
 end

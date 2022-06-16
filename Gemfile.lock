@@ -106,6 +106,8 @@ GEM
     erubi (1.10.0)
     excon (0.92.3)
     ffi (1.15.5-x64-mingw-ucrt)
+    figaro (1.2.0)
+      thor (>= 0.14.0, < 2)
     fog-aws (3.14.0)
       fog-core (~> 2.1)
       fog-json (~> 1.1)
@@ -271,6 +273,7 @@ DEPENDENCIES
   carrierwave
   debug
   devise
+  figaro
   fog-aws
   importmap-rails
   jbuilder

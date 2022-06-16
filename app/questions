@@ -9,9 +9,16 @@ properties form not passing values to database...
 while running "bundle install", does it installs other gem also?
 feather icons not working.
 required paramteres are passed in controller whle validation is performed in model, why is it so?
-
+difference between session and registration in devise?
+fixed navbar is hiding the content
+we don't need to write actions for devise session and registrations?
 
 todos::
 manage properties icon size
 _dashboard.html.erb
 styling
+application.yml
+
+
+Notes:
+use "fog-aws" instead of "fog".
