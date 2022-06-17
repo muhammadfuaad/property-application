@@ -1,1 +1,45 @@
 <p class="text-danger">views/dashboard/index.html.erb</p>
+<div class="row">
+
+  <h2 class="col-9">Dashboard</h2>
+  <button class="col-1 btn btn-primary">Share</button>
+  <button class="col-1 btn btn-outline-primary">Export</button>
+  <button class="col-1 btn btn-primary">This Week</button>
+
+</div>
+<% if account_signed_in? %>
+  <%= button_to "Sign Out", destroy_account_session_path, method: :delete, class: "btn btn-success" %>
+<% else %>
+  <%= button_to "Log In", new_account_session_path, class: "btn btn-outline-primary" %>
+<% end %>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Header</th>
+      <th scope="col">Header</th>
+      <th scope="col">Header</th>
+      <th scope="col">Header</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>Mark</td>
+      <td>Otto</td>
+      <td>@mdo</td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>Jacob</td>
+      <td>Thornton</td>
+      <td>@fat</td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td colspan="2">Larry the Bird</td>
+      <td>@twitter</td>
+    </tr>
+  </tbody>
+</table>

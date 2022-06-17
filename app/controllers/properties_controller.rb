@@ -13,7 +13,7 @@ class PropertiesController < ApplicationController
 
   # GET /properties/new
   def new
-    @property = Property.new
+    @property = Property.new(name:"trade center")
   end
 
   # GET /properties/1/edit

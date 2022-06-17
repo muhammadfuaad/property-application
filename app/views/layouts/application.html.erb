@@ -18,17 +18,18 @@
     <script>feather.replace()</script> %>
 
   </head>
-
   <body>
-    <% if ["public","devise"].include?(controller.controller_name) %>
-     <%# question:can you explain this? why it doesn't work with "includes" %>
+
+    <% if ["devise", "sessions"].include?(controller.controller_name) %>
       <header>
         <%= render "layouts/nav/public" %>
         <%= yield %>
       </header>
     <% else %>
-      <%= render "layouts/nav/dashboard" %>
-      <div class="contaner-fluid">
+      <header>
+        <%= render "layouts/nav/dashboard" %>
+      </header>
+      <div class="container-fluid">
         <div class="row">
           <%= render "layouts/nav/sidebar" %>
           <main role="main" class="col-md-9 ml-sm-auto col-lg-0 px-4">
@@ -37,9 +38,6 @@
         </div>
       </div>
     <% end %>
-
-    <%= render "layouts/footer" %>
-
-    
+    <%= render "layouts/footer" %>    
   </body>
 </html>

@@ -1,4 +1,9 @@
 <p class="text-danger">views/public/main.html.erb</p>
+<% if account_signed_in? %>
+  <%= button_to "Sign Out", destroy_account_session_path, method: :delete, class: "btn btn-success" %>
+<% else %>
+  <%= button_to "Log In", new_account_session_path, class: "btn btn-primary" %>
+<% end %>
 
 <section id="latest-propeties">
   <div class="container">
