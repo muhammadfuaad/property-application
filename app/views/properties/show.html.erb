@@ -1,10 +1,14 @@
 <p style="color: green"><%= notice %></p>
+<div class="container mt-5">
+  <div class="row">
+    <%= render @property %>
 
-<%= render @property %>
+    <div>
+      <%= link_to "Edit this property", edit_property_path(@property) %> |
+      <%= link_to "Back to properties", properties_path %>
 
-<div>
-  <%= link_to "Edit this property", edit_property_path(@property) %> |
-  <%= link_to "Back to properties", properties_path %>
-
-  <%= button_to "Destroy this property", @property, method: :delete %>
+      <%= button_to "Destroy this property", @property, method: :delete %>
+    </div>
+  </div>
 </div>
+
