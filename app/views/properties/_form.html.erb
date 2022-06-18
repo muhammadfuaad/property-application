@@ -41,6 +41,10 @@
     <%= form.label :photo, style: "display: block" %>
     <%= form.file_field :photo, class: "form-control" %>
     <%= form.hidden_field :photo_cache %>
+    <% if @property.photo.present? %>
+      <%= image_tag @property.photo.thumb.url %>
+    <% end %>
+
   </div>
 
   <div>
