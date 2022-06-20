@@ -1,12 +1,14 @@
 <% @properties.each do |property| %>
-  <div class="col-3">
-    <%= link_to property_thumbnail(property), property_path(property) %>
-    <h3 class="h5 mt-3"><%= property.name %></h3>
-    <p><%= property.address %></p>
-    <div class="amenities">
-      <span></span>
-      <span></span>
-      <span></span>
+  <div class="row">
+    <div class="col-8">
+      <img src="../assets/images/placeholder.png" class="img-fluid w-100 h-10">
+      <h3 class="h5 mt-3"><%= property.name %></h3>
+      <p><%= property.address %></p>
+      <div class="amenities">
+        <span></span>
+        <span></span>
+        <span></span>
+      <div>
     <div>
-  <div>
+  </div>
 <% end %>

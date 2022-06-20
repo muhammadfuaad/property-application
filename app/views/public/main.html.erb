@@ -5,16 +5,20 @@
   <%= button_to "Log In", new_account_session_path, class: "btn btn-primary" %>
 <% end %>
 
-<section id="first-section">
-  <h1>Search for your new home today</h1>
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent varius, arcu in elementum venenatis, eros sapien scelerisque nunc, sit amet rutrum ante massa sed ipsum. Phasellus a nisl a elit posuere varius id at massa. Aliquam ac massa molestie, dictum orci non, venenatis felis. Proin et tincidunt libero. Integer in ipsum massa. Suspendisse vel tortor sollicitudin, imperdiet turpis non, facilisis purus. Mauris ac fermentum tortor. Donec ac nunc hendrerit, ultrices libero porta, rutrum urna. Vestibulum lobortis nibh ac mollis tincidunt. Suspendisse sed euismod quam, nec commodo sapien. Maecenas vel laoreet lectus.</p>
-  <button class="btn btn-primary">Learn More</button>
-</section>
+<div class="container">
+  <section id="first-section">
+    <h1>Search for your new home today</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent varius, arcu in elementum venenatis, eros sapien scelerisque nunc, sit amet rutrum ante massa sed ipsum. Phasellus a nisl a elit posuere varius id at massa. Aliquam ac massa molestie, dictum orci non, venenatis felis. Proin et tincidunt libero. Integer in ipsum massa. Suspendisse vel tortor sollicitudin, imperdiet turpis non, facilisis purus. Mauris ac fermentum tortor. Donec ac nunc hendrerit, ultrices libero porta, rutrum urna. Vestibulum lobortis nibh ac mollis tincidunt. Suspendisse sed euismod quam, nec commodo sapien. Maecenas vel laoreet lectus.</p>
+    <button class="btn btn-primary">Learn More</button>
+  </section>
 
-<section id="latest-propeties">
-  <div class="container">
-    <div clas="row">
-      <%= render "properties/latest_properties" %>
+  <section id="latest-propeties">
+    <div class="container">
+      <div clas="row">
+        <div class="col-12">
+          <%= render "properties/latest_properties" %>
+        </div>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
+</div>
